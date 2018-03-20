@@ -103,7 +103,6 @@
 		E1421E07204C1EA10005C9C9 /* EveryDayResultModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EveryDayResultModel.m; sourceTree = "<group>"; };
 		E1421E09204C1EB30005C9C9 /* EveryDayModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EveryDayModel.h; sourceTree = "<group>"; };
 		E1421E0A204C1EB30005C9C9 /* EveryDayModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EveryDayModel.m; sourceTree = "<group>"; };
-		E14789142041328E006B21E7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		E14EA9B820402EA400DD3F79 /* SPL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E14EA9BB20402EA400DD3F79 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E14EA9BC20402EA400DD3F79 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -114,6 +113,7 @@
 		E14EA9C720402EA400DD3F79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E14EA9C920402EA400DD3F79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E14EA9CA20402EA400DD3F79 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E169A8682060F2B8005FA8F9 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = SPL/PrefixHeader.pch; sourceTree = SOURCE_ROOT; };
 		E172ED6020459D8F00F5216D /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		E172ED6120459D8F00F5216D /* NewsDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDetailController.m; sourceTree = "<group>"; };
 		E172ED6220459D8F00F5216D /* NewsViewPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewPagerController.m; sourceTree = "<group>"; };
@@ -220,8 +220,8 @@
 			isa = PBXGroup;
 			children = (
 				E138B56B20560BD100B24EA8 /* ApplicationEntrance.h */,
-				E138B56C20560BD100B24EA8 /* AppModuleEntrance.h */,
 				E138B56D20560BD100B24EA8 /* ApplicationEntrance.m */,
+				E138B56C20560BD100B24EA8 /* AppModuleEntrance.h */,
 				E138B56E20560BD100B24EA8 /* AppModuleEntrance.m */,
 			);
 			path = Service;
@@ -230,9 +230,9 @@
 		E138B57120560C5300B24EA8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E169A8682060F2B8005FA8F9 /* PrefixHeader.pch */,
 				E13D6F392046748200A4AB79 /* 迷你简启体.ttf */,
 				E14EA9CA20402EA400DD3F79 /* main.m */,
-				E14789142041328E006B21E7 /* PrefixHeader.pch */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -985,7 +985,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R7H6M33YE7;
-				GCC_PREFIX_HEADER = "/Users/renmenghan/Desktop/SPL/SPL/Supporting Files/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = SPL/PrefixHeader.pch;
 				INFOPLIST_FILE = SPL/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1002,7 +1002,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R7H6M33YE7;
-				GCC_PREFIX_HEADER = "/Users/renmenghan/Desktop/SPL/SPL/Supporting Files/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = SPL/PrefixHeader.pch;
 				INFOPLIST_FILE = SPL/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

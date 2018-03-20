@@ -9,13 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "MZTimerLabel.h"
 
-
-
 @protocol RunStatusViewDelegate<NSObject>
 
 -(void)closeButtonClick;
 -(void)showMapButtonClick;
 -(void)stopButtonClick;
+
 @end
 
 @interface RunStatusView : UIView
