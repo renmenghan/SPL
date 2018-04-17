@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-@class RMHAlertView;
-@protocol RMHAlertViewDelegate <NSObject>
-- (void)alertView:(RMHAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;
+@class TTAlertView;
+@protocol TTAlertViewDelegate <NSObject>
+- (void)alertView:(TTAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;
 @end
-@interface RMHAlertView : UIView
+@interface TTAlertView : UIView
 
 - (instancetype)initWithTitle:(NSString *)titles andImage:(UIImage *)promptImage content:(NSString *)content cancleButton:(NSString *)cancleButton otherButtons:(NSString *)otherButtons,...
     NS_REQUIRES_NIL_TERMINATION NS_EXTENSION_UNAVAILABLE_IOS("Use RMHAlertController instead.");
@@ -19,5 +19,5 @@
 
 - (void)show;
 
-@property (nonatomic,weak)id<RMHAlertViewDelegate> delegate;
+@property (nonatomic,weak)id<TTAlertViewDelegate> delegate;
 @end

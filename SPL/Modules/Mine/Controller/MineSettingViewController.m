@@ -12,7 +12,7 @@
 #import "UserInfoModel.h"
 #import "LoginOutCell.h"
 
-@interface MineSettingViewController ()
+@interface MineSettingViewController ()<UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property (nonatomic,strong) NSArray *menu;
 @property (nonatomic,strong) UIButton *rightButton;
 @property (nonatomic,strong) UserInfoModel *userModel;
@@ -142,7 +142,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSInteger row = indexPath.row;
+//    NSInteger row = indexPath.row;
     NSInteger section = indexPath.section;
     
     if (section == 0) {
@@ -297,7 +297,7 @@
     [params setSafeObject:[UserService sharedService].name forKey:@"username"];
     [params setSafeObject:[UserService sharedService].avatar forKey:@"image"];
     [params setSafeObject:[UserService sharedService].signature forKey:@"signature"];
-    NSString *password =[UserService sharedService].extraParams[@"password"];
+    NSString *password = [UserService sharedService].extraParams[@"password"];
     if (!IsEmptyString(password)) {
          [params setSafeObject:[password md5] forKey:@"password"];
     }

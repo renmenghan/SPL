@@ -10,7 +10,7 @@
 #import "NewsRequest.h"
 #import "NewsViewController.h"
 #import "VersionRequest.h"
-#import "RMHAlertView.h"
+#import "TTAlertView.h"
 @interface NewsViewPagerController ()
 
 @end
@@ -67,7 +67,7 @@
 {
     [VersionRequest getVersionWithParams:nil success:^(VersionResultModel *model) {
        
-        RMHAlertView *alert = [[RMHAlertView alloc] initWithTitle:@"提示" andImage:[UIImage imageNamed:@"dock_camera_down"] content:model.upgrade_point cancleButton:@"取消" otherButtons:@"过会提示",@"更新", nil];
+        TTAlertView *alert = [[TTAlertView alloc] initWithTitle:@"提示" andImage:[UIImage imageNamed:@"dock_camera_down"] content:model.upgrade_point cancleButton:@"取消" otherButtons:@"过会提示",@"更新", nil];
         
         [alert show];
         

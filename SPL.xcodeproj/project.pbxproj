@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9CC074B531BC77D83BE3312C /* libPods-SPL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C43B118368D68ED4C91F25 /* libPods-SPL.a */; };
-		E138B56920560BBF00B24EA8 /* RMHAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = E138B56820560BBF00B24EA8 /* RMHAlertView.m */; };
+		E138B56920560BBF00B24EA8 /* TTAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = E138B56820560BBF00B24EA8 /* TTAlertView.m */; };
 		E138B56F20560BD100B24EA8 /* ApplicationEntrance.m in Sources */ = {isa = PBXBuildFile; fileRef = E138B56D20560BD100B24EA8 /* ApplicationEntrance.m */; };
 		E138B57020560BD100B24EA8 /* AppModuleEntrance.m in Sources */ = {isa = PBXBuildFile; fileRef = E138B56E20560BD100B24EA8 /* AppModuleEntrance.m */; };
 		E13D6F1820465B6A00A4AB79 /* NewsIndexResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E13D6F1720465B6A00A4AB79 /* NewsIndexResultModel.m */; };
@@ -68,8 +68,8 @@
 		471452DF1606ED000F84DC6F /* Pods-SPL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SPL.release.xcconfig"; path = "Pods/Target Support Files/Pods-SPL/Pods-SPL.release.xcconfig"; sourceTree = "<group>"; };
 		4A39706B428C5C86C99CA307 /* Pods-SPL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SPL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SPL/Pods-SPL.debug.xcconfig"; sourceTree = "<group>"; };
 		D4C43B118368D68ED4C91F25 /* libPods-SPL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SPL.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E138B56720560BBF00B24EA8 /* RMHAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMHAlertView.h; sourceTree = "<group>"; };
-		E138B56820560BBF00B24EA8 /* RMHAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMHAlertView.m; sourceTree = "<group>"; };
+		E138B56720560BBF00B24EA8 /* TTAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAlertView.h; sourceTree = "<group>"; };
+		E138B56820560BBF00B24EA8 /* TTAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAlertView.m; sourceTree = "<group>"; };
 		E138B56B20560BD100B24EA8 /* ApplicationEntrance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationEntrance.h; sourceTree = "<group>"; };
 		E138B56C20560BD100B24EA8 /* AppModuleEntrance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppModuleEntrance.h; sourceTree = "<group>"; };
 		E138B56D20560BD100B24EA8 /* ApplicationEntrance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationEntrance.m; sourceTree = "<group>"; };
@@ -210,8 +210,8 @@
 		E138B56620560BBF00B24EA8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E138B56720560BBF00B24EA8 /* RMHAlertView.h */,
-				E138B56820560BBF00B24EA8 /* RMHAlertView.m */,
+				E138B56720560BBF00B24EA8 /* TTAlertView.h */,
+				E138B56820560BBF00B24EA8 /* TTAlertView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -819,7 +819,7 @@
 				E1421E08204C1EA10005C9C9 /* EveryDayResultModel.m in Sources */,
 				E172ED9020459D8F00F5216D /* NewsDetailCell.m in Sources */,
 				E172ED9720459D8F00F5216D /* UserRequest.m in Sources */,
-				E138B56920560BBF00B24EA8 /* RMHAlertView.m in Sources */,
+				E138B56920560BBF00B24EA8 /* TTAlertView.m in Sources */,
 				E172ED9320459D8F00F5216D /* ChooseLoginController.m in Sources */,
 				E1B343FD20496B3200D16723 /* RunningViewController.mm in Sources */,
 				E1421E05204C19BD0005C9C9 /* StatisticsRequest.m in Sources */,

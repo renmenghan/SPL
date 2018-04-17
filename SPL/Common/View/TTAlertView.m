@@ -6,9 +6,9 @@
 //  Copyright © 2016年 任梦晗. All rights reserved.
 //
 
-#import "RMHAlertView.h"
+#import "TTAlertView.h"
 
-@interface RMHAlertView()
+@interface TTAlertView()
 @property (nonatomic,copy) NSString *alertTitle;
 @property (nonatomic,copy) NSString *content;
 @property (nonatomic,strong) UIImage *promptImage;
@@ -17,7 +17,7 @@
 @property (nonatomic,strong) NSMutableArray *otherBtns;
 @property (nonatomic,strong) UIView *backView;
 @end
-@implementation RMHAlertView
+@implementation TTAlertView
 {
     UIImageView *_titleImage;
     UILabel *_alertTitleLb;
@@ -176,7 +176,6 @@
         _cancleButtonTitle = @"取消";
     }else {
         [_cancleBtn setTitle:self.cancleButtonTitle forState:UIControlStateNormal];
-        
     }
     
     if (_otherBtnsArr.count>1) {

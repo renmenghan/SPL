@@ -54,7 +54,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/RMHBase/RMHBase/Classes/Network/TTNetworkManager.m"
@@ -437,54 +437,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Pods/RMHBase/RMHBase/Classes/Network/TTNetworkManager.m"
-            timestampString = "541946577.4833339"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
-            landmarkName = "-postImageWithUrl:image:parameters:progress:success:failure:"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[TTNetworkManager postImageWithUrl:image:parameters:progress:success:failure:]"
-                  moduleName = "SPL"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/renmenghan/Desktop/SPL/Pods/RMHBase/RMHBase/Classes/Network/TTNetworkManager.m"
-                  timestampString = "541501378.564572"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "194"
-                  endingLineNumber = "194"
-                  offsetFromSymbolStart = "526">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__79-[TTNetworkManager postImageWithUrl:image:parameters:progress:success:failure:]_block_invoke"
-                  moduleName = "SPL"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/renmenghan/Desktop/SPL/Pods/RMHBase/RMHBase/Classes/Network/TTNetworkManager.m"
-                  timestampString = "541501378.56757"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "194"
-                  endingLineNumber = "194"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "SPL/Modules/Mine/View/MineEditCell.m"
             timestampString = "541946577.483405"
             startingColumnNumber = "9223372036854775807"
@@ -534,7 +486,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SPL/Modules/Sports/Controller/RunningViewController.mm"
-            timestampString = "541953471.797496"
+            timestampString = "543987694.609207"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "53"
@@ -550,7 +502,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SPL/Modules/Sports/Controller/RunningViewController.mm"
-            timestampString = "541953471.797832"
+            timestampString = "543987694.6113501"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "74"

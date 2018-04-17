@@ -36,7 +36,6 @@
 + (void)postImageWithParams:(NSDictionary *)params image:(UIImage *)image success:(void (^)(MineChangeAvatarResultModel *avatar))success failure:(void (^)(StatusModel *))failure
 {
     
-    
     [[TTNetworkManager sharedInstance] postImageWithUrl:POST_IMAGE_URL image:image parameters:params progress:^(NSProgress *progress) {
         
     } success:^(NSDictionary *result) {
