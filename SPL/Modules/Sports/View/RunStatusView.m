@@ -61,7 +61,7 @@
 - (UIButton *)closeButton
 {
     if (!_closeButton) {
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(10, 20, 40, 40)];
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(10, STATUSBAR_HEIGHT, 40, 40)];
         [button setBackgroundImage:[UIImage imageNamed:@"delete_post"] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(closeClick) forControlEvents:UIControlEventTouchUpInside];
         _closeButton = button;

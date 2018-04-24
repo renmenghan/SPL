@@ -12,13 +12,13 @@
 #import <BaiduMapAPI_Utils/BMKUtilsComponent.h>
 #import "RunStatusView.h"
 #import "SportsRequest.h"
-#import "RMHAlertView.h"
+#import "TTAlertView.h"
 typedef enum : NSUInteger {
     TrailStart,
     TrailEnd
 } Trail;
 
-@interface RunningViewController ()<BMKMapViewDelegate, BMKLocationServiceDelegate,RunStatusViewDelegate,RMHAlertViewDelegate>
+@interface RunningViewController ()<BMKMapViewDelegate, BMKLocationServiceDelegate,RunStatusViewDelegate,TTAlertViewDelegate>
 /** 百度定位地图服务 */
 @property (nonatomic, strong) BMKLocationService *bmkLocationService;
 /** 百度地图View */
@@ -81,7 +81,7 @@ typedef enum : NSUInteger {
     [self initBMLocationService];
     
     // 初始化地图窗口
-    self.mapView = [[BMKMapView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    self.mapView = [[BMKMapView alloc]initWithFrame:CGRectMake(0, STATUSBAR_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT-STATUSBAR_HEIGHT)];
     
     // 设置地图窗口上的子控件
     [self setupMapViewSubViews];
@@ -534,7 +534,7 @@ typedef enum : NSUInteger {
 {
  
     NSString *str = [NSString stringWithFormat:@"本次跑步距离为：%.1f米",self.sumDistance];
-    RMHAlertView *alert = [[RMHAlertView alloc] initWithTitle:@"提示" andImage:[UIImage imageNamed:@"dock_camera_down"] content:str cancleButton:@"确定" otherButtons: nil];
+    TTAlertView *alert = [[TTAlertView alloc] initWithTitle:@"提示" andImage:[UIImage imageNamed:@"dock_camera_down"] content:str cancleButton:@"确定" otherButtons: nil];
     
     alert.delegate = self;
     [alert show];
@@ -543,7 +543,7 @@ typedef enum : NSUInteger {
     
 }
 
-- (void)alertView:(RMHAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+- (void)alertView:(TTAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
  
     if (TrailStart  == self.trail) {

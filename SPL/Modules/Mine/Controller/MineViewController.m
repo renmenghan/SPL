@@ -33,7 +33,8 @@
     [super viewDidLoad];
     
     self.tableView.backgroundColor = Color_Gray245;
-
+//    self.tableView.top = STATUSBAR_HEIGHT;
+//    self.tableView.height = SCREEN_HEIGHT - STATUSBAR_HEIGHT;
     
     [self render];
     

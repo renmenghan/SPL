@@ -74,7 +74,7 @@ typedef enum : NSUInteger {
 - (UITextField *)userNameTF
 {
     if (!_userNameTF) {
-        UITextField *tf = [[UITextField alloc] initWithFrame:CGRectMake(10,NAVBAR_HEIGHT+ 20, self.view.width-20, 44)];
+        UITextField *tf = [[UITextField alloc] initWithFrame:CGRectMake(10, NAVBAR_HEIGHT+ 20, self.view.width-20, 44)];
         tf.font = FONT(14);
         tf.layer.borderWidth = 1;
         tf.layer.borderColor = Color_Gray(0).CGColor;

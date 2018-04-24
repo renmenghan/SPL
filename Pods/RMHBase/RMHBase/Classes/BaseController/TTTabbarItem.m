@@ -10,6 +10,7 @@
 #import "UIView+TT.h"
 #import "ShortcutMacro.h"
 #import "NSString+TT.h"
+#import "UIMacro.h"
 
 #define TABBAR_ITEM_SPAN_TOP    6
 #define TABBAR_ITEM_SPAN_BOTTOM 3
@@ -70,6 +71,9 @@
     self.label.width = self.width;
     self.label.bottom = self.height - 4.f;
     self.imageView.centerX = self.width / 2;
+    if (KIsiPhoneX) {
+        self.label.top = self.imageView.bottom;
+    }
     self.imageView.frame= CGRectOffset(self.imageView.frame, self.imageInset.left, self.imageInset.top);
 }
 
@@ -109,20 +113,20 @@
     [UIView animateWithDuration:0.1 animations:
      ^(void){
          
-         self.transform = CGAffineTransformScale(CGAffineTransformIdentity,0.8, 0.8);
+         self.imageView.transform = CGAffineTransformScale(CGAffineTransformIdentity,0.8, 0.8);
          
          
      } completion:^(BOOL finished){//do other thing
          [UIView animateWithDuration:0.2 animations:
           ^(void){
               
-              self.transform = CGAffineTransformScale(CGAffineTransformIdentity,1.1, 1.1);
+              self.imageView.transform = CGAffineTransformScale(CGAffineTransformIdentity,1.1, 1.1);
               
           } completion:^(BOOL finished){//do other thing
               [UIView animateWithDuration:0.1 animations:
                ^(void){
                    
-                   self.transform = CGAffineTransformScale(CGAffineTransformIdentity,1,1);
+                   self.imageView.transform = CGAffineTransformScale(CGAffineTransformIdentity,1,1);
                    
                    
                } completion:^(BOOL finished){//do other thing
@@ -152,3 +156,4 @@
 }
 
 @end
+

@@ -56,6 +56,7 @@ static TTNetworkManager *_manager = nil;
         
         [_manager.requestSerializer setValue:@"application/x-www-form-urlencoded;charset=utf-8" forHTTPHeaderField:@"Content-Type"];
         
+        
     });
 }
 
@@ -434,21 +435,19 @@ static TTNetworkManager *_manager = nil;
     //    [params setSafeObject:@"ios" forKey:@"app_type"];
     //    [params setSafeObject:[UIDevice TT_uniqueID] forKey:@"did"];
     NSString *appType = @"ios";
-    NSString *did = [UIDevice TT_uniqueID];
-    NSTimeInterval interval = [[NSDate date] timeIntervalSince1970] * 1000;
-
     [self.requestSerializer setValue:appType forHTTPHeaderField:@"app_type"];
+    NSString *did = [UIDevice TT_uniqueID];
     [self.requestSerializer setValue:did forHTTPHeaderField:@"did"];
+    NSTimeInterval interval = [[NSDate date] timeIntervalSince1970] * 1000;
     [self.requestSerializer setValue:[NSString stringWithFormat:@"%.0f",interval] forHTTPHeaderField:@"time"];
     [self.requestSerializer setValue:[[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"] forHTTPHeaderField:@"version"];
-    
     NSString *sign =[Des encryptUseDES:[NSString stringWithFormat:@"app_type=%@&did=%@&time=%.0f&version=%@",appType,did,interval,[[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"]] key:@"qwsxcfui"];
-    [self.requestSerializer setValue:sign forHTTPHeaderField:@"sign"];
-
+    
     DBG(@"sign---%@",sign);
     DBG(@"sign---%@",[Des decryptUseDES:sign key:@"qwsxcfui"]);
     
     
+    [self.requestSerializer setValue:sign forHTTPHeaderField:@"sign"];
     
     [params addEntriesFromDictionary:parameters];
     

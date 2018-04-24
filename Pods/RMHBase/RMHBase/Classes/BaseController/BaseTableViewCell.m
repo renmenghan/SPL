@@ -42,7 +42,6 @@
 }
 
 + (NSString *)cellIdentifier {
-    
     return NSStringFromClass([self class]);
 }
 

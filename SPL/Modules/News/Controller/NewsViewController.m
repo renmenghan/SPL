@@ -36,7 +36,7 @@
     
     self.tableView.top = 0;
     
-    self.tableView.height = SCREEN_HEIGHT - TabsViewHeight - NAVBAR_HEIGHT;
+    self.tableView.height = SCREEN_HEIGHT - TabsViewHeight - NAVBAR_HEIGHT -TABBAR_HEIGHT;
     
     self.showsPullToRefresh = YES;
     

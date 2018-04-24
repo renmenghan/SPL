@@ -148,7 +148,7 @@
     
     UIButton *startBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     startBtn.frame = CGRectMake(0, 0, 110, 110);
-    startBtn.center = CGPointMake(self.view.width/2, self.view.height * 0.5 + 150 +15);
+    startBtn.center = CGPointMake(self.view.width/2,KIsiPhoneX ?  self.view.height * 0.5 + 174 +15: self.view.height * 0.5 + 150 +15);
     startBtn.layer.cornerRadius = 55;
     startBtn.layer.masksToBounds = YES;
     //    [startBtn setTitle: GBLocalizedString(@"Start") forState:UIControlStateNormal];

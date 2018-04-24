@@ -9,6 +9,9 @@
 #import "TTViewPagerController.h"
 #import "UIView+TT.h"
 
+#define KIsiPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+#define STATUSBAR_HEIGHT           (KIsiPhoneX ? 44.f :20.f)
+#define NAVBAR_HEIGHT               (44.f + STATUSBAR_HEIGHT)
 @interface TTViewPagerController ()<TTViewPagerBarDelegate,UIScrollViewDelegate>
 
 
@@ -52,7 +55,7 @@
     
     self.contentView.contentSize = CGSizeMake(self.childViewControllers.count * self.view.width, 0);
     
-    self.viewPagerBar.frame = CGRectMake(0, _isNav? 60 : 0, self.view.width, 39);
+    self.viewPagerBar.frame = CGRectMake(0, _isNav? NAVBAR_HEIGHT : 0, self.view.width, 39);
     
     CGFloat contentViewY = self.viewPagerBar.top + self.viewPagerBar.height;
     CGRect  contentFrame = CGRectMake(0, contentViewY, self.view.width, self.view.height-contentViewY);
@@ -104,3 +107,4 @@
 }
 
 @end
+

@@ -13,7 +13,7 @@
 
 - (void)setOnlineImage:(NSString *)url
 {
-    [self setOnlineImage:url placeHolderImage:[UIImage imageNamed:@"common_placeholer@2x.png" module:@"RMHBase"]];
+    [self setOnlineImage:url placeHolderImage:[UIImage imageNamed:@"common_placeholer" module:@"RMHBase"]];
 }
 
 - (void)setOnlineImage:(NSString *)url placeHolderImage:(UIImage *)placeHolderImage
