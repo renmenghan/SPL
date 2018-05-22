@@ -81,7 +81,7 @@ typedef enum : NSUInteger {
     [self initBMLocationService];
     
     // 初始化地图窗口
-    self.mapView = [[BMKMapView alloc]initWithFrame:CGRectMake(0, STATUSBAR_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT-STATUSBAR_HEIGHT)];
+    self.mapView = [[BMKMapView alloc]initWithFrame:CGRectMake(0, STATUSBAR_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT - STATUSBAR_HEIGHT)];
     
     // 设置地图窗口上的子控件
     [self setupMapViewSubViews];
@@ -510,7 +510,7 @@ typedef enum : NSUInteger {
 // 设置mapview上的控件
 - (void)setupMapViewSubViews
 {
-    self.fullScreenBtn = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH-80, SCREEN_HEIGHT-80, 70, 70)];
+    self.fullScreenBtn = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH-80, SCREEN_HEIGHT-100-SAFE_BOTTOM_HEIGHT, 70, 70)];
     [self.fullScreenBtn setBackgroundImage:[UIImage imageNamed:@"live_fullscreen_off"] forState:UIControlStateNormal];
     [self.fullScreenBtn setBackgroundImage:[UIImage imageNamed:@"live_fullscreen_off_down"] forState:UIControlStateHighlighted];
     [self.fullScreenBtn addTarget:self action:@selector(showMessgeView) forControlEvents:UIControlEventTouchUpInside];

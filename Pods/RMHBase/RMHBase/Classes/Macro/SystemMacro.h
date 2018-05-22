@@ -21,6 +21,8 @@
 #define IS_IPHONE5                  (SCREEN_HEIGHT == 568)
 #define IS_IPHONE6                  (SCREEN_HEIGHT == 667)
 #define IS_IPHONE6Plus              (SCREEN_HEIGHT == 736)
+#define IS_IPHONEX                  ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+
 
 #define APP_LOCAL_SCHEME @"rmh"
 //标准宏

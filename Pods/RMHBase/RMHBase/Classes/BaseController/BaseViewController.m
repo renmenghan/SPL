@@ -138,14 +138,14 @@
     //    _noticeView.yOffset = self.view.height / 3 - self.view.height / 2;
     _noticeView.centerY = self.view.centerY;
     if (notice.length > 16||[notice rangeOfString:@"\n"].location!=NSNotFound) {
-        _noticeView.detailsLabelText = notice;
+        _noticeView.detailsLabel.text = notice;
     }else{
-        _noticeView.labelText = notice;
+        _noticeView.label.text = notice;
     }
     _noticeView.margin = 12.f;
     
-    [_noticeView show:YES];
-    [_noticeView hide:YES afterDelay:1.5f];
+    [_noticeView showAnimated:YES];
+    [_noticeView hideAnimated:YES afterDelay:1.5f];
 }
 
 - (void)showNotice:(NSString *)notice {
@@ -170,19 +170,19 @@
     //    _noticeView.yOffset = self.view.window.height / 3 - self.view.window.height / 2;
     _noticeView.centerY = self.view.centerY;
     if (notice.length > 16||[notice rangeOfString:@"\n"].location!=NSNotFound) {
-        _noticeView.detailsLabelText = notice;
+        _noticeView.detailsLabel.text = notice;
     }else{
-        _noticeView.labelText = notice;
+        _noticeView.label.text = notice;
     }
     _noticeView.margin = 12.f;
     
-    [_noticeView show:YES];
-    [_noticeView hide:YES afterDelay:duration];
+    [_noticeView showAnimated:YES];
+    [_noticeView hideAnimated:YES afterDelay:duration];
 }
 
 - (void)hideNotice {
     if (nil != _noticeView) {
-        [_noticeView hide:YES afterDelay:0.f];
+        [_noticeView hideAnimated:YES afterDelay:0.f];
     }
 }
 

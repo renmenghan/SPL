@@ -34,8 +34,7 @@
 - (void)addTableView
 {
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, self.hideNavigationBar?0:NAVBAR_HEIGHT, self.view.frame.size.width, self.hideNavigationBar?[UIScreen mainScreen].bounds.size.height : [UIScreen mainScreen].bounds.size.height - NAVBAR_HEIGHT) style:UITableViewStylePlain];
-    NSLog(@"------%f",self.tableView.top);
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, self.hideNavigationBar?0:NAVBAR_HEIGHT, self.view.frame.size.width, self.hideNavigationBar?SCREEN_HEIGHT : SCREEN_HEIGHT - NAVBAR_HEIGHT) style:UITableViewStylePlain];
     // 下拉
     self.tableView.delegate = self;
     // 上拉

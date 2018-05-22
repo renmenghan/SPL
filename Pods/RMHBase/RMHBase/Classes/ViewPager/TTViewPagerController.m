@@ -9,8 +9,8 @@
 #import "TTViewPagerController.h"
 #import "UIView+TT.h"
 
-#define KIsiPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
-#define STATUSBAR_HEIGHT           (KIsiPhoneX ? 44.f :20.f)
+#define IS_IPHONEX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+#define STATUSBAR_HEIGHT            (IS_IPHONEX ? 44.f :20.f)
 #define NAVBAR_HEIGHT               (44.f + STATUSBAR_HEIGHT)
 @interface TTViewPagerController ()<TTViewPagerBarDelegate,UIScrollViewDelegate>
 

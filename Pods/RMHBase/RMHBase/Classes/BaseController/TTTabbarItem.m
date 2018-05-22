@@ -71,7 +71,7 @@
     self.label.width = self.width;
     self.label.bottom = self.height - 4.f;
     self.imageView.centerX = self.width / 2;
-    if (KIsiPhoneX) {
+    if (IS_IPHONEX) {
         self.label.top = self.imageView.bottom;
     }
     self.imageView.frame= CGRectOffset(self.imageView.frame, self.imageInset.left, self.imageInset.top);

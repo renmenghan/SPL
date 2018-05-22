@@ -23,38 +23,38 @@ PODS:
   - MZTimerLabel (0.5.4)
   - PNChart (0.8.9):
     - UICountingLabel (~> 1.2.0)
-  - RMHBase (0.1.48):
-    - RMHBase/BaseController (= 0.1.48)
-    - RMHBase/BaseModel (= 0.1.48)
-    - RMHBase/Category (= 0.1.48)
-    - RMHBase/Des (= 0.1.48)
-    - RMHBase/Macro (= 0.1.48)
-    - RMHBase/Network (= 0.1.48)
-    - RMHBase/SliderView (= 0.1.48)
-    - RMHBase/ViewPager (= 0.1.48)
-  - RMHBase/BaseController (0.1.48):
+  - RMHBase (0.1.51):
+    - RMHBase/BaseController (= 0.1.51)
+    - RMHBase/BaseModel (= 0.1.51)
+    - RMHBase/Category (= 0.1.51)
+    - RMHBase/Des (= 0.1.51)
+    - RMHBase/Macro (= 0.1.51)
+    - RMHBase/Network (= 0.1.51)
+    - RMHBase/SliderView (= 0.1.51)
+    - RMHBase/ViewPager (= 0.1.51)
+  - RMHBase/BaseController (0.1.51):
     - MBProgressHUD
     - MJRefresh
     - RMHBase/BaseModel
     - RMHBase/Category
     - RMHBase/Des
     - RMHBase/Macro
-  - RMHBase/BaseModel (0.1.48):
+  - RMHBase/BaseModel (0.1.51):
     - JSONModel
-  - RMHBase/Category (0.1.48):
+  - RMHBase/Category (0.1.51):
     - SDWebImage
-  - RMHBase/Des (0.1.48):
+  - RMHBase/Des (0.1.51):
     - GTMBase64
-  - RMHBase/Macro (0.1.48)
-  - RMHBase/Network (0.1.48):
+  - RMHBase/Macro (0.1.51)
+  - RMHBase/Network (0.1.51):
     - AFNetworking
     - RMHBase/BaseController
     - RMHBase/BaseModel
     - RMHBase/Category
     - RMHBase/Des
     - RMHBase/Macro
-  - RMHBase/SliderView (0.1.48)
-  - RMHBase/ViewPager (0.1.48):
+  - RMHBase/SliderView (0.1.51)
+  - RMHBase/ViewPager (0.1.51):
     - RMHBase/BaseController
     - RMHBase/Category
   - SDWebImage (4.3.3):
@@ -95,7 +95,7 @@ SPEC CHECKSUMS:
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
   MZTimerLabel: cd9bfb9304540ef2a9e163384fca9c978f0dbf83
   PNChart: 84774d225c2126ded6c93d4dbe6ae98c3a73c2d2
-  RMHBase: 57860cb2b8b2214cee7bf88715d4672c9605b0a7
+  RMHBase: 1b0a6a1d197944c66e7c5bb149213db678ec6da4
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
 

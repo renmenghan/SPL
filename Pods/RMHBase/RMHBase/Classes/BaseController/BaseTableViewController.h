@@ -46,7 +46,6 @@ typedef NS_ENUM(NSInteger,LodingType) {
 
 - (void)loadData;
 
-- (void)normalDat;
 
 
 @end
