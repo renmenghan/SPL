@@ -27,6 +27,7 @@
 }
 - (void)viewDidLoad {
     [self addNavigationBar];
+    
     [super viewDidLoad];
     
     self.tableView.height = self.tableView.height - 50;
@@ -173,7 +174,7 @@
 - (CommentView *)commentView
 {
     if (!_commentView) {
-        _commentView = [[CommentView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT-50, SCREEN_WIDTH, 50)];
+        _commentView = [[CommentView alloc] initWithFrame:CGRectMake(0, IS_IPHONEX?SCREEN_HEIGHT-50-SAFE_BOTTOM_HEIGHT: SCREEN_HEIGHT-50, SCREEN_WIDTH, 50)];
         _commentView.delegate = self;
         _commentView.commentTF.delegate = self;
     }

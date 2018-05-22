@@ -295,7 +295,6 @@
 			children = (
 				E13D6F222046710000A4AB79 /* Controller */,
 				E13D6F232046710000A4AB79 /* Model */,
-				E13D6F242046710000A4AB79 /* View */,
 				E13D6F252046710000A4AB79 /* Request */,
 			);
 			path = Statistics;
@@ -319,13 +318,6 @@
 				E1421E0A204C1EB30005C9C9 /* EveryDayModel.m */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		E13D6F242046710000A4AB79 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		E13D6F252046710000A4AB79 /* Request */ = {
@@ -392,45 +384,6 @@
 			path = Request;
 			sourceTree = "<group>";
 		};
-		E13D6F2B2046710000A4AB79 /* Public */ = {
-			isa = PBXGroup;
-			children = (
-				E13D6F2C2046710000A4AB79 /* Controller */,
-				E13D6F2D2046710000A4AB79 /* Model */,
-				E13D6F2E2046710000A4AB79 /* View */,
-				E13D6F2F2046710000A4AB79 /* Request */,
-			);
-			path = Public;
-			sourceTree = "<group>";
-		};
-		E13D6F2C2046710000A4AB79 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		E13D6F2D2046710000A4AB79 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		E13D6F2E2046710000A4AB79 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		E13D6F2F2046710000A4AB79 /* Request */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Request;
-			sourceTree = "<group>";
-		};
 		E14EA9AF20402EA400DD3F79 = {
 			isa = PBXGroup;
 			children = (
@@ -471,7 +424,6 @@
 			isa = PBXGroup;
 			children = (
 				E1810A68204D691500F4DA20 /* Version */,
-				E13D6F2B2046710000A4AB79 /* Public */,
 				E13D6F212046710000A4AB79 /* Statistics */,
 				E13D6F262046710000A4AB79 /* Mine */,
 				E13D6F1C204670A300A4AB79 /* Sports */,
@@ -619,19 +571,10 @@
 		E1810A68204D691500F4DA20 /* Version */ = {
 			isa = PBXGroup;
 			children = (
-				E1810A69204D691500F4DA20 /* Controller */,
 				E1810A6A204D691500F4DA20 /* Model */,
-				E1810A6B204D691500F4DA20 /* View */,
 				E1810A6C204D691500F4DA20 /* Request */,
 			);
 			path = Version;
-			sourceTree = "<group>";
-		};
-		E1810A69204D691500F4DA20 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		E1810A6A204D691500F4DA20 /* Model */ = {
@@ -641,13 +584,6 @@
 				E1810A71204D693C00F4DA20 /* VersionResultModel.m */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		E1810A6B204D691500F4DA20 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		E1810A6C204D691500F4DA20 /* Request */ = {
@@ -670,7 +606,6 @@
 				E14EA9B420402EA400DD3F79 /* Sources */,
 				E14EA9B520402EA400DD3F79 /* Frameworks */,
 				E14EA9B620402EA400DD3F79 /* Resources */,
-				2067F5231E24B2F4EBBC6C20 /* [CP] Embed Pods Frameworks */,
 				896F64DD1631E227D98BD27D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -755,21 +690,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2067F5231E24B2F4EBBC6C20 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SPL/Pods-SPL-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		896F64DD1631E227D98BD27D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -780,11 +700,14 @@
 				"${PODS_ROOT}/BaiduMapKit/BaiduMapKit/BaiduMapAPI_Map.framework/Resources/mapapi.bundle",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
-				$PODS_CONFIGURATION_BUILD_DIR/RMHBase/RMHBase.bundle,
+				"${PODS_CONFIGURATION_BUILD_DIR}/RMHBase/RMHBase.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mapapi.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RMHBase.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

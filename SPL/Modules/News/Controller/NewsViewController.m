@@ -43,6 +43,7 @@
     self.showsInfiniteScrolling = YES;
     
     [self initData];
+    
 }
 
 - (void)initData
