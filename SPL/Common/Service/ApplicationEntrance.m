@@ -41,7 +41,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     TTNetworkConfig *config = [[TTNetworkConfig alloc] init];
-    config.baseURL = @"http://118.89.227.239";
+    config.baseURL = @"http://118.89.227.239:81";
     [TTNetworkManager startWithConfigure:config];
     
 

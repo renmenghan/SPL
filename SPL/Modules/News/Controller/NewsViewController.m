@@ -90,7 +90,7 @@
             if (self.page == self.totalPage) {
                 [self showNoMoreDataNotice:@"没有更多数据了"];
             }else{
-                 [self hideNoMoreDataNotice];
+                [self hideNoMoreDataNotice];
             }
         } failure:^(StatusModel *status) {
             [self showNotice:status.msg];

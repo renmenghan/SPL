@@ -441,10 +441,10 @@ static TTNetworkManager *_manager = nil;
     NSTimeInterval interval = [[NSDate date] timeIntervalSince1970] * 1000;
     [self.requestSerializer setValue:[NSString stringWithFormat:@"%.0f",interval] forHTTPHeaderField:@"time"];
     [self.requestSerializer setValue:[[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"] forHTTPHeaderField:@"version"];
-    NSString *sign =[Des encryptUseDES:[NSString stringWithFormat:@"app_type=%@&did=%@&time=%.0f&version=%@",appType,did,interval,[[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"]] key:@"qwsxcfui"];
-    
-    DBG(@"sign---%@",sign);
-    DBG(@"sign---%@",[Des decryptUseDES:sign key:@"qwsxcfui"]);
+    NSString *sign =[Des encryptUseDES:[NSString stringWithFormat:@"app_type=%@&did=%@&time=%.0f&version=%@",appType,did,interval,[[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"]] key:@"qwsxcfuiqwsxcfui"];
+    sign = [self hexStringFromString:sign];
+    DBG(@"sign rex---%@",sign);
+    DBG(@"sign---%@",[Des decryptUseDES:[self stringFromHexString:sign] key:@"qwsxcfuiqwsxcfui"]);
     
     
     [self.requestSerializer setValue:sign forHTTPHeaderField:@"sign"];
@@ -456,6 +456,38 @@ static TTNetworkManager *_manager = nil;
     }
     return params;
     
+}
+
+
+- (NSString *)hexStringFromString:(NSString *)string {
+    NSData *myD = [string dataUsingEncoding:NSUTF8StringEncoding];
+    Byte *bytes = (Byte *)[myD bytes];
+    NSString *hexStr=@"";
+    for(int i=0;i<[myD length];i++) {
+        NSString *newHexStr = [NSString stringWithFormat:@"%x",bytes[i]&0xff]; //16进制数
+        if([newHexStr length]==1) {
+            hexStr = [NSString stringWithFormat:@"%@0%@",hexStr,newHexStr];
+        } else {
+            hexStr = [NSString stringWithFormat:@"%@%@",hexStr,newHexStr];
+        }
+    }
+    return hexStr;
+}
+
+// 十六进制转换为普通字符串
+- (NSString *)stringFromHexString:(NSString *)hexString {
+    char *myBuffer = (char *)malloc((int)[hexString length] / 2 + 1);
+    bzero(myBuffer, [hexString length] / 2 + 1);
+    for (int i = 0; i < [hexString length] - 1; i += 2) {
+        unsigned int anInt;
+        NSString * hexCharStr = [hexString substringWithRange:NSMakeRange(i, 2)];
+        NSScanner * scanner = [[NSScanner alloc] initWithString:hexCharStr];
+        [scanner scanHexInt:&anInt];
+        myBuffer[i / 2] = (char)anInt;
+    }
+    NSString *unicodeString = [NSString stringWithCString:myBuffer encoding:4];
+    
+    return unicodeString;
 }
 @end
 
